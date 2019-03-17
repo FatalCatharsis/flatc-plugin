@@ -1,6 +1,7 @@
 package github.fatalcatharsis
 
 import org.gradle.api.tasks.InputFile
+import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.TaskAction
 import org.gradle.execution.commandline.TaskConfigurationException
 import org.gradle.kotlin.dsl.findPlugin
@@ -14,6 +15,7 @@ open class FlatcConvert : FlatcTask(
     defaultOutputDir = Paths.get("./generated/json"),
     inputExtension = "json"
 ) {
+    @Internal
     lateinit var template: File
 
     init {

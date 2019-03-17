@@ -1,10 +1,8 @@
 package github.fatalcatharsis
 
 import org.gradle.api.DefaultTask
-import org.gradle.api.tasks.Input
-import org.gradle.api.tasks.InputFiles
+import org.gradle.api.tasks.*
 import org.gradle.api.tasks.Optional
-import org.gradle.api.tasks.OutputDirectory
 import org.gradle.execution.commandline.TaskConfigurationException
 import java.io.File
 import java.nio.file.Files
@@ -15,6 +13,7 @@ abstract class FlatcTask(
     defaultOutputDir: Path,
     private val inputExtension: String
 ) : DefaultTask() {
+    @Internal
     lateinit var input: File
 
     @OutputDirectory
