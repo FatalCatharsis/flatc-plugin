@@ -1,4 +1,5 @@
-This gradle plugin can be used to perform a pre-build tasks related to google flatbuffers. Currently, you can use it to
+#Flatc Plugin
+This gradle plugin can be used to perform pre-build tasks related to google flatbuffers. Currently, you can use it to:
 
 * Generate source files from flatbuffers schema files (*.fbs) to be included in your build.
 * Generate binary files from json files matching a schema for use in the project.
